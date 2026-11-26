@@ -26,8 +26,8 @@ where *x* is the fraction of yes votes, so the best outcome is 70% yes.
 | File | What it is |
 | --- | --- |
 | `Goor_Game.py` | The complete game as a script: 10 players, each a two-action learning automaton. |
-| `GGO_Final.ipynb` | Notebook version with an adaptive learning-rate variant. |
-| `ACM SAC.ipynb`, `ICAP_paper.ipynb` | Notebooks with further experiment variants. |
+| `Goore_Game.ipynb` | Notebook version with a fixed learning rate. It also plots how many players vote yes over time. |
+| `Goore_Game_adaptive_rate.ipynb` | The same game with an adaptive learning rate: `lambda_1` grows linearly from 0.001 to 0.1 during the run, and the plot marks the optimal number of yes votes. |
 
 The notebooks open directly in Google Colab from the badge at the top of each one.
 
@@ -63,6 +63,13 @@ referee rewards most. Which players end up on which side differs from run to run
 | `number_players` from 10 to 20 | settings | Is the outcome closer to the peak? Why? |
 | `lambda_1` from 0.01 to 0.1 | settings | Faster, but is the final split still right? |
 | Starting probabilities | `probability_players` | Does the starting point change who votes yes? |
+
+## References
+
+The Goore Game was introduced by Tsetlin and is analysed in detail by Narendra and Thathachar.
+
+- M. L. Tsetlin, *Automaton Theory and Modeling of Biological Systems*. New York: Academic Press, 1973.
+- K. S. Narendra and M. A. L. Thathachar, *Learning Automata: An Introduction*. Englewood Cliffs, NJ: Prentice Hall, 1989.
 
 ## Related repositories
 
